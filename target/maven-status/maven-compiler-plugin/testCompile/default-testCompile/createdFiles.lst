@@ -1,0 +1,9 @@
+com\test\android\carousell\BaseTest.class
+com\test\android\screens\ListingScreen.class
+com\test\android\screens\LoginScreen.class
+com\test\android\utils\EventListener.class
+com\test\android\utils\ReusableFunctions.class
+com\test\android\utils\TestListener.class
+com\test\android\utils\General.class
+com\test\android\screens\FilterSettingsScreen.class
+com\test\android\screens\LaunchScreen.class

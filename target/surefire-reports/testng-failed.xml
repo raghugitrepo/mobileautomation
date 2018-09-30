@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Group of group Suite]">
+  <test name="Group of group Test(failed)">
+    <classes>
+      <class name="com.test.android.testcases.SearchEverythingElseRecentListingTest">
+        <methods>
+          <include name="searchEverythingElse"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.test.android.testcases.SearchEverythingElseRecentListingTest -->
+    </classes>
+  </test> <!-- Group of group Test(failed) -->
+</suite> <!-- Failed suite [Group of group Suite] -->

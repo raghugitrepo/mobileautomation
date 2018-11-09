@@ -14,25 +14,26 @@ import com.test.android.screens.ListingScreen;
 import com.test.android.screens.LoginScreen;
 
 public class SearchEverythingElseRecentListingTest extends BaseTest {
-
+	
 	LoginScreen loginScreen;
 	HomeScreen homeScreen;
 	LaunchScreen launchScreen;
 	FilterSettingsScreen filterScreen;
 	ListingScreen listingScreen;
 	
-	public SearchEverythingElseRecentListingTest() {
-		super();
-	}
+//	public SearchEverythingElseRecentListingTest() {
+//		super();
+//	}
 
 	@BeforeMethod
 	public void setup() throws MalformedURLException {
 		launchApp();
-		launchScreen = new LaunchScreen();
-		loginScreen = new LoginScreen();
-		homeScreen = new HomeScreen();
-		filterScreen = new FilterSettingsScreen();
-		listingScreen = new ListingScreen();
+		System.out.println(driver.getDeviceTime());
+		launchScreen = new LaunchScreen(driver);
+		loginScreen = new LoginScreen(driver);
+		homeScreen = new HomeScreen(driver);
+		filterScreen = new FilterSettingsScreen(driver);
+		listingScreen = new ListingScreen(driver);
 
 	}
 

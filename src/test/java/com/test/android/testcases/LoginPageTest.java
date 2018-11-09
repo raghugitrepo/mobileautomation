@@ -17,15 +17,15 @@ public class LoginPageTest extends BaseTest {
 	HomeScreen homeScreen;
 	LaunchScreen launchScreen;
 
-	public LoginPageTest() {
+	/*public LoginPageTest() {
 		super();
-	}
+	}*/
 
 	@BeforeMethod
 	public void setup() throws MalformedURLException {
 		launchApp();
-		launchScreen = new LaunchScreen();
-		loginScreen = new LoginScreen();
+		launchScreen = new LaunchScreen(driver);
+		loginScreen = new LoginScreen(driver);
 
 	}
 

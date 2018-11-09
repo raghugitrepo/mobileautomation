@@ -4,19 +4,22 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.test.android.carousell.BaseTest;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class ListingScreen extends BaseTest{
+public class ListingScreen {
+	AppiumDriver<MobileElement> driver = null;
 	
-	WebDriverWait wait = new WebDriverWait(driver, 15);
+	WebDriverWait wait = null;
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.thecarousell.Carousell:id/bar_filter_title']")
 	MobileElement filterMenu;
@@ -30,8 +33,10 @@ public class ListingScreen extends BaseTest{
 	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id= 'com.thecarousell.Carousell:id/text_above_fold']")
 	List<MobileElement> listingTime;
 	
-	public ListingScreen() {
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	public ListingScreen(AppiumDriver<MobileElement> driver) {
+		this.driver = driver;
+		PageFactory.initElements(new AppiumFieldDecorator(this.driver), this);
+		this.wait = new WebDriverWait(this.driver, 15);
 	}
 	
 	public void closebanner() {
